@@ -1,0 +1,22 @@
+---
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  skill: {
+    categoryKey: string;
+    itemsKey: string;
+  };
+}
+
+const { skill } = Astro.props;
+const t = useTranslations('en'); // Defaults to 'en'
+---
+<div class="glass-panel" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; height: 100%;">
+  <h3 style="font-size: 1.25rem; font-weight: 600; margin: 0; color: var(--text-color);">
+    {t(skill.categoryKey as any)}
+  </h3>
+  <div style="height: 1px; background: var(--card-border); margin: 0.5rem 0;"></div>
+  <p style="color: var(--text-muted); line-height: 1.6; margin: 0; flex-grow: 1;">
+    {t(skill.itemsKey as any)}
+  </p>
+</div>

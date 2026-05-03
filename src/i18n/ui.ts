@@ -8,8 +8,9 @@ const en = {
     'nav.about': 'About',
 
     'hero.title': 'Hi, I am',
-    'hero.subtitle': 'Unity Developer & Software Engineer',
-    'hero.description': 'I craft interactive experiences, robust systems, and powerful tools for Unity. Explore my projects and read their documentation.',
+    'hero.subtitle': 'Technical Lead & Software Engineer',
+    'hero.description': 'I craft robust enterprise systems, complex integrations, and interactive experiences.',
+
 
     'projects.title': 'Featured Projects',
     'projects.docs': 'Documentation',
@@ -31,6 +32,28 @@ const en = {
     'project.redemptiontoys.tag.1': 'Card Game',
     'project.redemptiontoys.tag.2': '2D',
     'project.redemptiontoys.tag.3': 'Unity',
+
+    // Experience Section
+    'experience.title': 'Professional Experience',
+    'exp.omega.lead.role': 'Salesforce Technical Lead',
+    'exp.omega.lead.desc.1': 'Leadership and management of the development team, ensuring quality and efficiency in project delivery.',
+    'exp.omega.lead.desc.2': 'Specialized in Agentforce, implementing solutions with external integrations and technical value propositions.',
+    'exp.omega.lead.desc.3': 'Technical Lead for the implementation of a Contact Center in Salesforce, integrating Amazon Connect.',
+    'exp.omega.lead.desc.4': 'Developed automation scripts using SFDX for environment refreshes and CI/CD workflow optimization.',
+
+    // Skills Section
+    'skills.title': 'Technical Expertise',
+    'skills.salesforce.category': 'Salesforce Ecosystem',
+    'skills.salesforce.items': 'Expert in Apex, LWC, Aura Components, Agentforce, Integrations, and DevOps (SFDX).',
+
+    'skills.fullstack.category': 'Full-Stack Development',
+    'skills.fullstack.items': 'TypeScript, JavaScript (ES6+), Angular, HTML5, CSS3, SQL.',
+
+    'skills.languages.category': 'Programming Languages',
+    'skills.languages.items': 'Java, C#, C++, Python (multi-threaded servers).',
+
+    'skills.architecture.category': 'Architecture & Quality',
+    'skills.architecture.items': 'Design Patterns, SOLID principles, Clean Code, Agile (SCRUM), Git.',
 };
 
 const es: Partial<typeof en> = {
@@ -39,8 +62,9 @@ const es: Partial<typeof en> = {
     'nav.about': 'Sobre mí',
 
     'hero.title': 'Hola, soy',
-    'hero.subtitle': 'Desarrollador Unity y Software Engineer',
-    'hero.description': 'Creo experiencias interactivas, sistemas robustos y herramientas potentes para Unity. Explora mis proyectos y lee su documentación.',
+    'hero.subtitle': 'Technical Lead y Software Engineer',
+    'hero.description': 'Creo sistemas empresariales robustos, integraciones complejas y experiencias interactivas.',
+
 
     'projects.title': 'Proyectos Destacados',
     'projects.docs': 'Documentación',
@@ -56,6 +80,28 @@ const es: Partial<typeof en> = {
     // RedemptionToys
     'project.redemptiontoys.description': 'Ponte en la piel de un juguetero que utiliza la economía circular para mantenerse a flote. ¡Repara juguetes gestionando tus cartas y recursos! Creado durante la GranadaJam2017.',
     'project.redemptiontoys.tag.1': 'Juego de Cartas',
+
+    // Experience Section
+    'experience.title': 'Trayectoria Profesional',
+    'exp.omega.lead.role': 'Salesforce Technical Lead',
+    'exp.omega.lead.desc.1': 'Liderazgo y gestión del equipo de desarrollo, asegurando la calidad y eficiencia en la entrega de proyectos.',
+    'exp.omega.lead.desc.2': 'Especializado en Agentforce, implementando soluciones con integraciones externas y propuestas de valor técnico.',
+    'exp.omega.lead.desc.3': 'Technical Lead para la implementación de un Contact Center en Salesforce, integrando Amazon Connect.',
+    'exp.omega.lead.desc.4': 'Desarrollo de scripts de automatización con SFDX para refresco de entornos y optimización de flujos CI/CD.',
+
+    // Skills Section
+    'skills.title': 'Conocimientos Técnicos',
+    'skills.salesforce.category': 'Ecosistema Salesforce',
+    'skills.salesforce.items': 'Experto en Apex, LWC, Aura Components, Agentforce, Data Cloud, Integraciones y DevOps (SFDX).',
+
+    'skills.fullstack.category': 'Desarrollo Full-Stack',
+    'skills.fullstack.items': 'TypeScript, JavaScript (ES6+), Angular, HTML5, CSS3, SQL.',
+
+    'skills.languages.category': 'Lenguajes de Programación',
+    'skills.languages.items': 'Java, C#, C++, Python (servidores multi-hilo).',
+
+    'skills.architecture.category': 'Arquitectura y Calidad',
+    'skills.architecture.items': 'Patrones de Diseño, Principios SOLID, Clean Code, Agile (SCRUM), Git.',
 };
 
 export const languages = {

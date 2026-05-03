@@ -27,3 +27,35 @@ export const PROJECTS = [
         itchUrl: "https://superkorlas.itch.io/redemptiontoys",
     }
 ] as const;
+
+export const EXPERIENCE = [
+    {
+        id: "omega-lead",
+        roleKey: "exp.omega.lead.role",
+        descriptionKeys: [
+            "exp.omega.lead.desc.1",
+            "exp.omega.lead.desc.2",
+            "exp.omega.lead.desc.3",
+            "exp.omega.lead.desc.4"
+        ]
+    }
+] as const;
+
+export const SKILLS = [
+    {
+        categoryKey: "skills.salesforce.category",
+        itemsKey: "skills.salesforce.items"
+    },
+    {
+        categoryKey: "skills.fullstack.category",
+        itemsKey: "skills.fullstack.items"
+    },
+    {
+        categoryKey: "skills.languages.category",
+        itemsKey: "skills.languages.items"
+    },
+    {
+        categoryKey: "skills.architecture.category",
+        itemsKey: "skills.architecture.items"
+    }
+] as const;
