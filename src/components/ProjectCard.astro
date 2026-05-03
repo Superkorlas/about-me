@@ -11,6 +11,7 @@ interface Props {
     githubUrl: string;
     demoUrl: string;
     docsUrl: string;
+    itchUrl: string;
   };
 }
 
@@ -30,7 +31,12 @@ const { project } = Astro.props;
     ))}
   </div>
   
-  <div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+  <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
+    {project.itchUrl && (
+      <a href={project.itchUrl} class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="font-size: 0.875rem; background: #fa5c5c; color: white;">
+        {t('projects.itch')}
+      </a>
+    )}
     {project.docsUrl && (
       <a href={project.docsUrl} class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="font-size: 0.875rem;">
         {t('projects.docs')}
