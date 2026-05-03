@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { SITE_CONFIG, PROJECTS } from '../data/config';
+import { useTranslations } from '../i18n/ui';
+
+const t = useTranslations('en'); // Defaults to 'en'
+---
+
+<Layout>
+	<section class="container" style="padding-top: 6rem; padding-bottom: 4rem;">
+    <div style="max-width: 800px;">
+      <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 700;">
+        {t('hero.title')} <span class="text-gradient">{SITE_CONFIG.author}</span>
+      </h1>
+      <h2 style="font-size: 2rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem;">
+        {t('hero.subtitle')}
+      </h2>
+      <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 600px; line-height: 1.8;">
+        {t('hero.description')}
+      </p>
+    </div>
+	</section>
+
+  <section class="container" style="padding-top: 4rem; padding-bottom: 4rem;">
+    <h2 style="font-size: 2.5rem; font-weight: 600; margin-bottom: 3rem; display: inline-block; position: relative;">
+      {t('projects.title')}
+      <div style="position: absolute; bottom: -10px; left: 0; width: 50px; height: 4px; background: var(--primary-color); border-radius: 2px;"></div>
+    </h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+      {PROJECTS.map(project => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+  </section>
+</Layout>

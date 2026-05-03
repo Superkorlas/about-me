@@ -1,0 +1,45 @@
+---
+import { useTranslations } from '../i18n/ui';
+const t = useTranslations('en');
+
+interface Props {
+  project: {
+    id: string;
+    name: string;
+    description: string;
+    tags: string[];
+    githubUrl: string;
+    demoUrl: string;
+    docsUrl: string;
+  };
+}
+
+const { project } = Astro.props;
+---
+
+<article class="glass-panel" style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; height: 100%;">
+  <h3 style="font-size: 1.25rem; font-weight: 600; color: var(--text-color); margin-bottom: 0.5rem;">{project.name}</h3>
+  
+  <p style="color: var(--text-muted); flex: 1;">
+    {project.description}
+  </p>
+  
+  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; margin-bottom: 1rem;">
+    {project.tags.map(tag => (
+      <span class="tag">{tag}</span>
+    ))}
+  </div>
+  
+  <div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+    {project.docsUrl && (
+      <a href={project.docsUrl} class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="font-size: 0.875rem;">
+        {t('projects.docs')}
+      </a>
+    )}
+    {project.githubUrl && (
+      <a href={project.githubUrl} class="btn btn-outline" target="_blank" rel="noopener noreferrer" style="font-size: 0.875rem;">
+        {t('projects.source')}
+      </a>
+    )}
+  </div>
+</article>
