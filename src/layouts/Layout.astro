@@ -1,5 +1,4 @@
 ---
-import '../styles/theme.css';
 import '../styles/global.css';
 import { SITE_CONFIG } from '../data/config';
 import { defaultLang, useTranslations } from '../i18n/ui';
@@ -12,6 +11,8 @@ interface Props {
 }
 
 const { title = t('site.title'), description = t('site.description') } = Astro.props;
+
+const themeUrl = import.meta.env.DEV ? `${import.meta.env.BASE_URL}theme.css` : 'https://Superkorlas.github.io/about-me/theme.css';
 ---
 
 <!doctype html>
@@ -24,7 +25,7 @@ const { title = t('site.title'), description = t('site.description') } = Astro.p
     <meta name="description" content={description} />
 		<title>{title}</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href={themeUrl} />
 	</head>
 	<body>
     <header class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
