@@ -1,7 +1,7 @@
 const en = {
-    'site.title': 'Superkorlas Portfolio',
+    'site.title': 'Alejandro Portfolio',
     'site.description': 'Personal portfolio showcasing my Unity projects, games, and documentation.',
-    'site.author': 'Superkorlas',
+    'site.author': 'Alejandro',
 
     'nav.home': 'Home',
     'nav.projects': 'Projects',
@@ -44,13 +44,13 @@ const en = {
     // Skills Section
     'skills.title': 'Technical Expertise',
     'skills.salesforce.category': 'Salesforce Ecosystem',
-    'skills.salesforce.items': 'Expert in Apex, LWC, Aura Components, Agentforce, Integrations, and DevOps (SFDX).',
+    'skills.salesforce.items': 'Expert in Apex, LWC, Aura Components, Agentforce, Integrations, SOQL and DevOps (SFDX).',
 
     'skills.fullstack.category': 'Full-Stack Development',
     'skills.fullstack.items': 'TypeScript, JavaScript (ES6+), Angular, HTML5, CSS3, SQL.',
 
     'skills.languages.category': 'Programming Languages',
-    'skills.languages.items': 'Java, C#, C++, Python (multi-threaded servers).',
+    'skills.languages.items': 'Java, C#, C++, Python.',
 
     'skills.architecture.category': 'Architecture & Quality',
     'skills.architecture.items': 'Design Patterns, SOLID principles, Clean Code, Agile (SCRUM), Git.',
@@ -92,13 +92,11 @@ const es: Partial<typeof en> = {
     // Skills Section
     'skills.title': 'Conocimientos Técnicos',
     'skills.salesforce.category': 'Ecosistema Salesforce',
-    'skills.salesforce.items': 'Experto en Apex, LWC, Aura Components, Agentforce, Data Cloud, Integraciones y DevOps (SFDX).',
+    'skills.salesforce.items': 'Experto en Apex, LWC, Aura Components, Agentforce, Data Cloud, Integraciones, SOQL y DevOps (SFDX).',
 
     'skills.fullstack.category': 'Desarrollo Full-Stack',
-    'skills.fullstack.items': 'TypeScript, JavaScript (ES6+), Angular, HTML5, CSS3, SQL.',
 
     'skills.languages.category': 'Lenguajes de Programación',
-    'skills.languages.items': 'Java, C#, C++, Python (servidores multi-hilo).',
 
     'skills.architecture.category': 'Arquitectura y Calidad',
     'skills.architecture.items': 'Patrones de Diseño, Principios SOLID, Clean Code, Agile (SCRUM), Git.',

@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   github: "https://github.com/Superkorlas",
-  linkedin: "https://linkedin.com/in/your-profile",
+  linkedin: "https://www.linkedin.com/in/alejandro-de-la-plata-ramos",
   itchio: "https://superkorlas.itch.io/",
   email: "your.email@example.com",
 };
