@@ -15,6 +15,7 @@ const items = [...TECH_STACK, ...TECH_STACK]; // duplicate for infinite loop
           alt={name}
           width={40}
           height={40}
+          fallback="text"
         />
         <span class="tech-name">{name}</span>
       </div>
@@ -62,9 +63,9 @@ const items = [...TECH_STACK, ...TECH_STACK]; // duplicate for infinite loop
     transform: scale(1.15);
   }
 
-  /* when IconImg shows the image, hide the redundant text */
-  .tech-item:has(img:not([style*="none"])) .tech-name {
-    display: block;
+  /* hide name when fallback text is visible to avoid duplication */
+  .tech-item:has(.icon-fallback:not([style="display:none;"])) .tech-name {
+    display: none;
   }
 
   .tech-name {
