@@ -2,6 +2,7 @@
 import { useTranslations } from "../i18n/ui";
 import { ICONS } from "../data/icons";
 import IconImg from "./IconImg.astro";
+import { resolvePublicAsset } from "../utils/assets";
 const t = useTranslations("en");
 
 interface Props {
@@ -19,14 +20,6 @@ interface Props {
 }
 
 const { project } = Astro.props;
-
-function resolvePublicAsset(path: string): string {
-    if (!path.startsWith("/")) return path;
-    const filename = path.slice(1);
-    return import.meta.env.DEV
-        ? `${import.meta.env.BASE_URL}${filename}`
-        : `https://Superkorlas.github.io/about-me/${filename}`;
-}
 ---
 
 <article class="glass-panel project-card">
