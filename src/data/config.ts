@@ -28,40 +28,7 @@ export const PROJECTS = [
         docsUrl: "",
         itchUrl: "https://superkorlas.itch.io/redemptiontoys",
         imageUrl: "https://img.itch.zone/aW1hZ2UvOTExOTYxLzUxNTU0NTAucG5n/794x1000/NIg8th.png",
-    },
-    {
-        id: "redemptiontoys",
-        nameKey: "project.redemptiontoys.name",
-        descriptionKey: "project.redemptiontoys.description",
-        tagsKeys: ["project.redemptiontoys.tag.1", "project.redemptiontoys.tag.2", "project.redemptiontoys.tag.3"],
-        githubUrl: "",
-        demoUrl: "",
-        docsUrl: "",
-        itchUrl: "https://superkorlas.itch.io/redemptiontoys",
-        imageUrl: "https://img.itch.zone/aW1hZ2UvOTExOTYxLzUxNTU0NTAucG5n/794x1000/NIg8th.png",
-    },
-    {
-        id: "redemptiontoys",
-        nameKey: "project.redemptiontoys.name",
-        descriptionKey: "project.redemptiontoys.description",
-        tagsKeys: ["project.redemptiontoys.tag.1", "project.redemptiontoys.tag.2", "project.redemptiontoys.tag.3"],
-        githubUrl: "",
-        demoUrl: "",
-        docsUrl: "",
-        itchUrl: "https://superkorlas.itch.io/redemptiontoys",
-        imageUrl: "https://img.itch.zone/aW1hZ2UvOTExOTYxLzUxNTU0NTAucG5n/794x1000/NIg8th.png",
-    },
-    {
-        id: "redemptiontoys",
-        nameKey: "project.redemptiontoys.name",
-        descriptionKey: "project.redemptiontoys.description",
-        tagsKeys: ["project.redemptiontoys.tag.1", "project.redemptiontoys.tag.2", "project.redemptiontoys.tag.3"],
-        githubUrl: "",
-        demoUrl: "",
-        docsUrl: "",
-        itchUrl: "https://superkorlas.itch.io/redemptiontoys",
-        imageUrl: "https://img.itch.zone/aW1hZ2UvOTExOTYxLzUxNTU0NTAucG5n/794x1000/NIg8th.png",
-    },
+    }
 ] as const;
 
 export const EXPERIENCE = [
