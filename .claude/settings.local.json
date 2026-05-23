@@ -17,7 +17,9 @@
       "Read(//tmp/**)",
       "WebFetch(domain:icon.horse)",
       "WebFetch(domain:api.iconify.design)",
-      "Bash(Select-Object FullName)"
+      "Bash(Select-Object FullName)",
+      "Bash(npx astro *)",
+      "Bash(npm run *)"
     ]
   }
 }

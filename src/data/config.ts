@@ -4,6 +4,7 @@ export const SITE_CONFIG = {
     itchio: "https://superkorlas.itch.io/",
     email: "fire.softworks.entertainment@gmail.com",
     photoUrl: "/profile.jpg",
+    web3formsKey: "6d97e85d-32fe-4d2c-b0e8-298d8655c288",
 };
 
 // Icon URLs are managed in src/data/icons.ts

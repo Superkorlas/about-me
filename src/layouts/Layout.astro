@@ -5,6 +5,7 @@ import { ICONS } from "../data/icons";
 import { defaultLang, useTranslations } from "../i18n/ui";
 import IconImg from "../components/IconImg.astro";
 import { resolvePublicAsset } from "../utils/assets";
+import ContactForm from "../components/ContactForm";
 
 const t = useTranslations(defaultLang);
 
@@ -82,6 +83,7 @@ const themeUrl = resolvePublicAsset('/theme.css');
                 {t("site.author")}. All rights reserved.
             </p>
         </footer>
+        <ContactForm client:load />
     </body>
 </html>
 

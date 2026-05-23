@@ -21,6 +21,24 @@ const en = {
 
     'footer.made': 'Made with Astro by',
 
+    // Contact form
+    'contact.aria': 'Contact',
+    'contact.title': 'Contact me',
+    'contact.name.label': 'Name',
+    'contact.name.placeholder': 'Your name',
+    'contact.email.label': 'Email',
+    'contact.email.placeholder': 'your@email.com',
+    'contact.message.label': 'Message',
+    'contact.message.placeholder': "What's on your mind?",
+    'contact.submit': 'Send message',
+    'contact.sending': 'Sending…',
+
+    // Toast notifications
+    'toast.success': "Message sent! I'll get back to you soon.",
+    'toast.error.prefix': 'Something went wrong. You can also reach me on',
+    'toast.error.linkedin': 'LinkedIn',
+    'toast.dismiss': 'Dismiss',
+
     // Octorabbit
     'project.octorabbit.name': 'Octorabbit',
     'project.octorabbit.description': 'Repair the ship and help save the universe! Control its tentacles to repair the ship, but be careful with the space garbage. Developed during Global Game Jam 2020.',
@@ -76,6 +94,23 @@ const es: Partial<typeof en> = {
     'projects.itch': 'Ver en Itch.io',
 
     'footer.made': 'Hecho con Astro por',
+
+    // Contact form
+    'contact.aria': 'Contactar',
+    'contact.title': 'Contáctame',
+    'contact.name.label': 'Nombre',
+    'contact.name.placeholder': 'Tu nombre',
+    'contact.email.label': 'Email',
+    'contact.message.label': 'Mensaje',
+    'contact.message.placeholder': '¿En qué puedo ayudarte?',
+    'contact.submit': 'Enviar mensaje',
+    'contact.sending': 'Enviando…',
+
+    // Toast notifications
+    'toast.success': '¡Mensaje enviado! Me pondré en contacto contigo pronto.',
+    'toast.error.prefix': 'Algo salió mal. También puedes contactarme en',
+    'toast.error.linkedin': 'LinkedIn',
+    'toast.dismiss': 'Cerrar',
 
     // Octorabbit
     'project.octorabbit.description': '¡Repara la nave y ayuda a salvar el universo! Controla sus tentáculos para arreglar la nave evitando la basura espacial. Desarrollado durante la Global Game Jam 2020.',
