@@ -8,6 +8,16 @@ interface Props {
 }
 const { src, alt, width = 20, height = 20, fallback = 'text' } = Astro.props;
 
+function resolveLocalSrc(path: string): string {
+  if (!path.startsWith('/')) return path;
+  const filename = path.slice(1);
+  return import.meta.env.DEV
+    ? `${import.meta.env.BASE_URL}${filename}`
+    : `https://Superkorlas.github.io/about-me/${filename}`;
+}
+
+const resolvedSrc = resolveLocalSrc(src);
+
 const onerror = fallback === 'none'
   ? "this.style.display='none';"
   : "this.style.display='none';this.nextElementSibling.style.display='inline-flex';";
@@ -15,7 +25,7 @@ const onerror = fallback === 'none'
 
 {src ? (
   <span class="icon-img">
-    <img src={src} alt={alt} width={width} height={height} loading="lazy" onerror={onerror} />
+    <img src={resolvedSrc} alt={alt} width={width} height={height} loading="lazy" onerror={onerror} />
     {fallback === 'text' && <span class="icon-fallback" style="display:none;">{alt}</span>}
   </span>
 ) : fallback === 'text' ? (
