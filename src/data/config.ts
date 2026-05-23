@@ -1,8 +1,8 @@
 export const SITE_CONFIG = {
-  github: "https://github.com/Superkorlas",
-  linkedin: "https://www.linkedin.com/in/alejandro-de-la-plata-ramos",
-  itchio: "https://superkorlas.itch.io/",
-  email: "fire.softworks.entertainment@gmail.com",
+    github: "https://github.com/Superkorlas",
+    linkedin: "https://www.linkedin.com/in/alejandro-de-la-plata-ramos",
+    itchio: "https://superkorlas.itch.io/",
+    email: "fire.softworks.entertainment@gmail.com",
 };
 
 export const PROJECTS = [
@@ -15,6 +15,7 @@ export const PROJECTS = [
         demoUrl: "",
         docsUrl: "",
         itchUrl: "https://dianavi.itch.io/octorabbit",
+        imageUrl: "https://img.itch.zone/aW1hZ2UvNTYyMDQ4LzI5NDk0NTMucG5n/794x1000/PDNzDb.png",
     },
     {
         id: "redemptiontoys",
@@ -25,6 +26,7 @@ export const PROJECTS = [
         demoUrl: "",
         docsUrl: "",
         itchUrl: "https://superkorlas.itch.io/redemptiontoys",
+        imageUrl: "https://img.itch.zone/aW1hZ2UvOTExOTYxLzUxNTU0NTAucG5n/794x1000/NIg8th.png",
     }
 ] as const;
 
