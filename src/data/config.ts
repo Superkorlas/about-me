@@ -9,19 +9,22 @@ export const SITE_CONFIG = {
 // Icon URLs are managed in src/data/icons.ts
 // 'icon' must be a key of ICONS.tech
 export const TECH_STACK = [
+    { name: 'Git', icon: 'git' },
+    { name: 'GitHub', icon: 'github' },
     { name: 'Python', icon: 'python' },
+    { name: 'C++', icon: 'cplusplus' },
     { name: 'C#', icon: 'csharp' },
     { name: 'Java', icon: 'java' },
     { name: 'JavaScript', icon: 'javascript' },
     { name: 'TypeScript', icon: 'typescript' },
-    { name: 'Salesforce', icon: 'salesforce' },
     { name: 'Angular', icon: 'angular' },
-    { name: 'Unity', icon: 'unity' },
+    { name: 'Astro', icon: 'astro' },
     { name: 'HTML5', icon: 'html5' },
     { name: 'CSS', icon: 'css' },
-    { name: 'Git', icon: 'git' },
-    { name: 'GitHub', icon: 'github' },
-    { name: 'Astro', icon: 'astro' },
+    { name: 'Unity', icon: 'unity' },
+    { name: 'Unreal', icon: 'unreal' },
+    { name: 'Godot Engine', icon: 'godot' },
+    { name: 'Salesforce', icon: 'salesforce' },
 ] as const;
 
 export const PROJECTS = [

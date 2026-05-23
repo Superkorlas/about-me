@@ -11,7 +11,7 @@ export const ICONS = {
     nav: {
         itchio: 'https://cdn.simpleicons.org/itchdotio/94a3b8',
         github: 'https://cdn.simpleicons.org/github/94a3b8',
-        linkedin: '',
+        linkedin: '/icons/linkedin-white.svg',
     },
 
     // --- Buttons on project cards ---
@@ -22,19 +22,22 @@ export const ICONS = {
 
     // --- Tech Stack carousel ---
     tech: {
-        python: 'https://cdn.simpleicons.org/python',
-        csharp: '',
-        java: 'https://cdn.simpleicons.org/java',
+        python: '/icons/python.svg',
+        cplusplus: '/icons/cplusplus.svg',
+        csharp: '/icons/csharp.svg',
+        java: '/icons/java.svg',
         javascript: 'https://cdn.simpleicons.org/javascript',
         typescript: 'https://cdn.simpleicons.org/typescript',
-        salesforce: '',
-        angular: 'https://cdn.simpleicons.org/angular/ffffff',
-        unity: 'https://cdn.simpleicons.org/unity/ffffff',
+        salesforce: '/icons/salesforce.svg',
+        angular: '/icons/angular.svg',
         html5: 'https://cdn.simpleicons.org/html5',
         css: 'https://cdn.simpleicons.org/CSS',
         git: 'https://cdn.simpleicons.org/git',
         github: 'https://cdn.simpleicons.org/github/ffffff',
         astro: 'https://cdn.simpleicons.org/astro/ffffff',
+        unity: 'https://cdn.simpleicons.org/unity/ffffff',
+        unreal: 'https://cdn.simpleicons.org/unrealengine/ffffff',
+        godot: '/icons/godotengine.svg',
     },
 
 } as const;
