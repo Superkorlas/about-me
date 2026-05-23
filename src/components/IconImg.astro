@@ -1,0 +1,46 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  fallback?: 'text' | 'none';
+}
+const { src, alt, width = 20, height = 20, fallback = 'text' } = Astro.props;
+
+const onerror = fallback === 'none'
+  ? "this.style.display='none';"
+  : "this.style.display='none';this.nextElementSibling.style.display='inline-flex';";
+---
+
+{src ? (
+  <span class="icon-img">
+    <img src={src} alt={alt} width={width} height={height} loading="lazy" onerror={onerror} />
+    {fallback === 'text' && <span class="icon-fallback" style="display:none;">{alt}</span>}
+  </span>
+) : fallback === 'text' ? (
+  <span class="icon-img">
+    <span class="icon-fallback">{alt}</span>
+  </span>
+) : null}
+
+<style>
+  .icon-img {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .icon-fallback {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    border: 1px solid var(--card-border);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    white-space: nowrap;
+    background: var(--card-bg);
+    line-height: 1.4;
+  }
+</style>

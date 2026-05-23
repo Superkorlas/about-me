@@ -6,6 +6,24 @@ export const SITE_CONFIG = {
     photoUrl: "/profile.jpg",
 };
 
+// Las URLs de los iconos se gestionan en src/data/icons.ts
+// 'icon' debe ser una clave de ICONS.tech
+export const TECH_STACK = [
+    { name: 'Python', icon: 'python' },
+    { name: 'C#', icon: 'csharp' },
+    { name: 'Java', icon: 'java' },
+    { name: 'JavaScript', icon: 'javascript' },
+    { name: 'TypeScript', icon: 'typescript' },
+    { name: 'Salesforce', icon: 'salesforce' },
+    { name: 'Angular', icon: 'angular' },
+    { name: 'Unity', icon: 'unity' },
+    { name: 'HTML5', icon: 'html5' },
+    { name: 'CSS', icon: 'css' },
+    { name: 'Git', icon: 'git' },
+    { name: 'GitHub', icon: 'github' },
+    { name: 'Astro', icon: 'astro' },
+] as const;
+
 export const PROJECTS = [
     {
         id: "octorabbit",

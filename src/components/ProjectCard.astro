@@ -1,141 +1,174 @@
 ---
-import { useTranslations } from '../i18n/ui';
-const t = useTranslations('en');
+import { useTranslations } from "../i18n/ui";
+import { ICONS } from "../data/icons";
+import IconImg from "./IconImg.astro";
+const t = useTranslations("en");
 
 interface Props {
-  project: {
-    id: string;
-    nameKey: string;
-    descriptionKey: string;
-    tagsKeys: readonly string[];
-    githubUrl: string;
-    demoUrl: string;
-    docsUrl: string;
-    itchUrl: string;
-    imageUrl: string;
-  };
+    project: {
+        id: string;
+        nameKey: string;
+        descriptionKey: string;
+        tagsKeys: readonly string[];
+        githubUrl: string;
+        demoUrl: string;
+        docsUrl: string;
+        itchUrl: string;
+        imageUrl: string;
+    };
 }
 
 const { project } = Astro.props;
 
 function resolvePublicAsset(path: string): string {
-  if (!path.startsWith('/')) return path;
-  const filename = path.slice(1);
-  return import.meta.env.DEV
-    ? `${import.meta.env.BASE_URL}${filename}`
-    : `https://Superkorlas.github.io/about-me/${filename}`;
+    if (!path.startsWith("/")) return path;
+    const filename = path.slice(1);
+    return import.meta.env.DEV
+        ? `${import.meta.env.BASE_URL}${filename}`
+        : `https://Superkorlas.github.io/about-me/${filename}`;
 }
 ---
 
 <article class="glass-panel project-card">
-  {project.imageUrl && (
-    <div class="project-image-wrapper">
-      <img src={resolvePublicAsset(project.imageUrl)} alt={t(project.nameKey as any)} class="project-image" loading="lazy" />
-    </div>
-  )}
-  <div class="project-body">
-    <h3 class="project-title">{t(project.nameKey as any)}</h3>
+    {
+        project.imageUrl && (
+            <div class="project-image-wrapper">
+                <img
+                    src={resolvePublicAsset(project.imageUrl)}
+                    alt={t(project.nameKey as any)}
+                    class="project-image"
+                    loading="lazy"
+                />
+            </div>
+        )
+    }
+    <div class="project-body">
+        <h3 class="project-title">{t(project.nameKey as any)}</h3>
 
-    <p class="project-description">
-      {t(project.descriptionKey as any)}
-    </p>
+        <p class="project-description">
+            {t(project.descriptionKey as any)}
+        </p>
 
-    <div class="project-tags">
-      {project.tagsKeys.map((tagKey) => (
-        <span class="tag">{t(tagKey as any)}</span>
-      ))}
-    </div>
+        <div class="project-tags">
+            {
+                project.tagsKeys.map((tagKey) => (
+                    <span class="tag">{t(tagKey as any)}</span>
+                ))
+            }
+        </div>
 
-    <div class="project-links">
-      {project.itchUrl && (
-        <a href={project.itchUrl} class="btn btn-itch" target="_blank" rel="noopener noreferrer">
-          {t('projects.itch')}
-        </a>
-      )}
-      {project.docsUrl && (
-        <a href={project.docsUrl} class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-          {t('projects.docs')}
-        </a>
-      )}
-      {project.githubUrl && (
-        <a href={project.githubUrl} class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-          {t('projects.source')}
-        </a>
-      )}
+        <div class="project-links">
+            {
+                project.itchUrl && (
+                    <a href={project.itchUrl} class="btn btn-itch" target="_blank" rel="noopener noreferrer">
+                        <IconImg src={ICONS.btn.itchio} alt="" width={15} height={15} fallback="none" />
+                        {t("projects.itch")}
+                    </a>
+                )
+            }
+            {
+                project.docsUrl && (
+                    <a
+                        href={project.docsUrl}
+                        class="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {t("projects.docs")}
+                    </a>
+                )
+            }
+            {
+                project.githubUrl && (
+                    <a href={project.githubUrl} class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        <IconImg src={ICONS.btn.github} alt="" width={15} height={15} fallback="none" />
+                        {t("projects.source")}
+                    </a>
+                )
+            }
+        </div>
     </div>
-  </div>
 </article>
 
 <style>
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow: hidden;
-    padding: 0;
-  }
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        padding: 0;
+    }
 
-  .project-image-wrapper {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
+    .project-image-wrapper {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
 
-  .project-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-  }
+    .project-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
 
-  .project-card:hover .project-image {
-    transform: scale(1.04);
-  }
+    .project-card:hover .project-image {
+        transform: scale(1.04);
+    }
 
-  .project-body {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
-    flex: 1;
-  }
+    .project-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        flex: 1;
+    }
 
-  .project-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-color);
-    margin: 0;
-  }
+    .project-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-color);
+        margin: 0;
+    }
 
-  .project-description {
-    color: var(--text-muted);
-    margin: 0;
-    flex: 1;
-  }
+    .project-description {
+        color: var(--text-muted);
+        margin: 0;
+        flex: 1;
+    }
 
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
 
-  .project-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: auto;
-  }
+    .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: auto;
+    }
 
-  .btn-itch {
-    font-size: 0.875rem;
-    background: #fa5c5c;
-    color: white;
-  }
+    .btn-itch {
+        font-size: 0.875rem;
+        background: #fa5c5c;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
 
-  .btn-primary,
-  .btn-outline {
-    font-size: 0.875rem;
-  }
+    .btn-primary {
+        font-size: 0.875rem;
+    }
+
+    .btn-outline {
+        font-size: 0.875rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
 </style>

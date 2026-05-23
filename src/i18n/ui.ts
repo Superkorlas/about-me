@@ -12,6 +12,8 @@ const en = {
     'hero.description': 'I craft robust enterprise systems, complex integrations, and interactive experiences.',
 
 
+    'tech.title': 'Tech Stack',
+
     'projects.title': 'Featured Projects',
     'projects.docs': 'Documentation',
     'projects.source': 'Source Code',
@@ -65,6 +67,8 @@ const es: Partial<typeof en> = {
     'hero.subtitle': 'Technical Lead y Software Engineer',
     'hero.description': 'Creo sistemas empresariales robustos, integraciones complejas y experiencias interactivas.',
 
+
+    'tech.title': 'Tecnologías',
 
     'projects.title': 'Proyectos Destacados',
     'projects.docs': 'Documentación',

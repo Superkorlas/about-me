@@ -1,0 +1,75 @@
+---
+import { TECH_STACK } from '../data/config';
+import { ICONS } from '../data/icons';
+import IconImg from './IconImg.astro';
+
+const items = [...TECH_STACK, ...TECH_STACK]; // duplicar para loop infinito
+---
+
+<div class="tech-wrapper">
+  <div class="tech-track">
+    {items.map(({ name, icon }) => (
+      <div class="tech-item">
+        <IconImg
+          src={ICONS.tech[icon as keyof typeof ICONS.tech]}
+          alt={name}
+          width={40}
+          height={40}
+        />
+        <span class="tech-name">{name}</span>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .tech-wrapper {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    mask: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    padding: 1rem 0;
+  }
+
+  .tech-track {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: max-content;
+    animation: auto-scroll 30s linear infinite;
+  }
+
+  .tech-wrapper:hover .tech-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes auto-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.65;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .tech-item:hover {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+  /* cuando IconImg muestra la imagen, ocultar el texto redundante */
+  .tech-item:has(img:not([style*="none"])) .tech-name {
+    display: block;
+  }
+
+  .tech-name {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+</style>
