@@ -1,0 +1,126 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { PROJECTS } from '../data/config';
+
+interface Props {
+  projects: typeof PROJECTS;
+}
+
+const { projects } = Astro.props;
+---
+
+<div class="carousel-wrapper">
+  <button class="carousel-btn carousel-btn--prev" aria-label="Previous project" disabled>&#8592;</button>
+
+  <div class="carousel-track">
+    {projects.map((project) => (
+      <div class="carousel-slide">
+        <ProjectCard project={project} />
+      </div>
+    ))}
+  </div>
+
+  <button class="carousel-btn carousel-btn--next" aria-label="Next project">&#8594;</button>
+</div>
+
+<style>
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 2rem;
+    padding: 1rem 0.25rem;
+    scrollbar-width: none;
+    flex: 1;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-slide {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+  }
+
+  .carousel-btn {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--card-border);
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+    backdrop-filter: blur(8px);
+    line-height: 1;
+  }
+
+  .carousel-btn:hover:not(:disabled) {
+    border-color: var(--primary-color);
+    background: rgba(99, 102, 241, 0.15);
+  }
+
+  .carousel-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 640px) {
+    .carousel-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 1rem;
+    }
+
+    .carousel-slide {
+      flex: 0 0 82vw;
+    }
+  }
+</style>
+
+<script>
+  const wrappers = document.querySelectorAll<HTMLElement>('.carousel-wrapper');
+
+  wrappers.forEach((wrapper) => {
+    const track = wrapper.querySelector<HTMLElement>('.carousel-track')!;
+    const prevBtn = wrapper.querySelector<HTMLButtonElement>('.carousel-btn--prev')!;
+    const nextBtn = wrapper.querySelector<HTMLButtonElement>('.carousel-btn--next')!;
+
+    function slideWidth(): number {
+      const slide = track.querySelector<HTMLElement>('.carousel-slide');
+      if (!slide) return 0;
+      return slide.offsetWidth + 32; // 32px = 2rem gap
+    }
+
+    function updateButtons() {
+      prevBtn.disabled = track.scrollLeft <= 1;
+      nextBtn.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 1;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -slideWidth(), behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: slideWidth(), behavior: 'smooth' });
+    });
+
+    track.addEventListener('scroll', updateButtons, { passive: true });
+
+    updateButtons();
+  });
+</script>

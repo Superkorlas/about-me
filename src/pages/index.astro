@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import ProjectCarousel from '../components/ProjectCarousel.astro';
 import ExperienceItem from '../components/ExperienceItem.astro';
 import SkillItem from '../components/SkillItem.astro';
 import { SITE_CONFIG, PROJECTS, EXPERIENCE, SKILLS } from '../data/config';
@@ -10,17 +10,29 @@ const t = useTranslations('en'); // Defaults to 'en'
 ---
 
 <Layout>
-	<section class="container" style="padding-top: 6rem; padding-bottom: 4rem;">
-    <div style="max-width: 800px;">
-      <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 700;">
-        {t('hero.title')} <span class="text-gradient">{t('site.author')}</span>
-      </h1>
-      <h2 style="font-size: 2rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem;">
-        {t('hero.subtitle')}
-      </h2>
-      <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 600px; line-height: 1.8;">
-        {t('hero.description')}
-      </p>
+	<section class="container hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; font-weight: 700;">
+          {t('hero.title')} <span class="text-gradient">{t('site.author')}</span>
+        </h1>
+        <h2 style="font-size: 2rem; font-weight: 500; color: var(--text-muted); margin-bottom: 2rem;">
+          {t('hero.subtitle')}
+        </h2>
+        <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 600px; line-height: 1.8;">
+          {t('hero.description')}
+        </p>
+      </div>
+      {SITE_CONFIG.photoUrl && (
+        <div class="hero-photo-wrapper">
+          <img
+            src={SITE_CONFIG.photoUrl}
+            alt={t('site.author')}
+            class="hero-photo"
+            loading="eager"
+          />
+        </div>
+      )}
     </div>
 	</section>
 
@@ -56,10 +68,58 @@ const t = useTranslations('en'); // Defaults to 'en'
       <div style="position: absolute; bottom: -10px; left: 0; width: 50px; height: 4px; background: var(--primary-color); border-radius: 2px;"></div>
     </h2>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
-      {PROJECTS.map(project => (
-        <ProjectCard project={project} />
-      ))}
-    </div>
+    <ProjectCarousel projects={PROJECTS} />
   </section>
 </Layout>
+
+<style>
+  .hero-section {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 900px;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-photo-wrapper {
+    flex-shrink: 0;
+  }
+
+  .hero-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--card-border);
+    box-shadow: 0 0 32px rgba(99, 102, 241, 0.25);
+  }
+
+  @media (max-width: 640px) {
+    .hero-section {
+      padding-top: 4rem;
+    }
+
+    .hero-content {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    .hero-photo-wrapper {
+      align-self: center;
+    }
+
+    .hero-photo {
+      width: 120px;
+      height: 120px;
+    }
+  }
+</style>
