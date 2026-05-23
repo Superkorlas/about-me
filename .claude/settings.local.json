@@ -3,7 +3,20 @@
     "allow": [
       "Bash(Get-ChildItem -Path \"D:\\\\Documentos\\\\Desarrollo\\\\Web\\\\about-me\" -Force)",
       "Bash(Select-Object Name, PSIsContainer)",
-      "Bash(Get-ChildItem *)"
+      "Bash(Get-ChildItem *)",
+      "WebFetch(domain:simpleicons.org)",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "WebFetch(domain:unpkg.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm pack *)",
+      "Bash(node *)",
+      "Bash(cd /tmp)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const si=require\\('simple-icons'\\);const icon=si.siItchio||si['simple-icons'].siItchio;console.log\\(JSON.stringify\\({svg:icon.svg,path:icon.path,viewBox:'0 0 24 24'}\\)\\)\")",
+      "Bash(mkdir -p /tmp/si_test)",
+      "Read(//tmp/**)",
+      "WebFetch(domain:icon.horse)",
+      "WebFetch(domain:api.iconify.design)"
     ]
   }
 }

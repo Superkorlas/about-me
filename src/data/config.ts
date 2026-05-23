@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
     linkedin: "https://www.linkedin.com/in/alejandro-de-la-plata-ramos",
     itchio: "https://superkorlas.itch.io/",
     email: "fire.softworks.entertainment@gmail.com",
-    photoUrl: "https://media.licdn.com/dms/image/v2/D4D03AQGjJIKB8-taHQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695208477285?e=1781136000&v=beta&t=vs3DELwX7QBjav2JikQ-NWmWtbvYWTVDW_2hDTDO9kc",
+    photoUrl: "/profile.jpg",
 };
 
 export const PROJECTS = [
@@ -16,7 +16,7 @@ export const PROJECTS = [
         demoUrl: "",
         docsUrl: "",
         itchUrl: "https://dianavi.itch.io/octorabbit",
-        imageUrl: "https://img.itch.zone/aW1hZ2UvNTYyMDQ4LzI5NDk0NTMucG5n/794x1000/PDNzDb.png",
+        imageUrl: "/projects/octorabbit-portrait.png",
     },
     {
         id: "redemptiontoys",
@@ -27,7 +27,7 @@ export const PROJECTS = [
         demoUrl: "",
         docsUrl: "",
         itchUrl: "https://superkorlas.itch.io/redemptiontoys",
-        imageUrl: "https://img.itch.zone/aW1hZ2UvOTExOTYxLzUxNTU0NTAucG5n/794x1000/NIg8th.png",
+        imageUrl: "/projects/redemption-toys-portrait.png",
     }
 ] as const;
 

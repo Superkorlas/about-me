@@ -7,6 +7,14 @@ import { SITE_CONFIG, PROJECTS, EXPERIENCE, SKILLS } from '../data/config';
 import { useTranslations } from '../i18n/ui';
 
 const t = useTranslations('en'); // Defaults to 'en'
+
+function resolvePublicAsset(path: string): string {
+  if (!path.startsWith('/')) return path;
+  const filename = path.slice(1);
+  return import.meta.env.DEV
+    ? `${import.meta.env.BASE_URL}${filename}`
+    : `https://Superkorlas.github.io/about-me/${filename}`;
+}
 ---
 
 <Layout>
@@ -26,7 +34,7 @@ const t = useTranslations('en'); // Defaults to 'en'
       {SITE_CONFIG.photoUrl && (
         <div class="hero-photo-wrapper">
           <img
-            src={SITE_CONFIG.photoUrl}
+            src={resolvePublicAsset(SITE_CONFIG.photoUrl)}
             alt={t('site.author')}
             class="hero-photo"
             loading="eager"
