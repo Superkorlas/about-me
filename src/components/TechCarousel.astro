@@ -3,7 +3,7 @@ import { TECH_STACK } from '../data/config';
 import { ICONS } from '../data/icons';
 import IconImg from './IconImg.astro';
 
-const items = [...TECH_STACK, ...TECH_STACK]; // duplicar para loop infinito
+const items = [...TECH_STACK, ...TECH_STACK]; // duplicate for infinite loop
 ---
 
 <div class="tech-wrapper">
@@ -62,7 +62,7 @@ const items = [...TECH_STACK, ...TECH_STACK]; // duplicar para loop infinito
     transform: scale(1.15);
   }
 
-  /* cuando IconImg muestra la imagen, ocultar el texto redundante */
+  /* when IconImg shows the image, hide the redundant text */
   .tech-item:has(img:not([style*="none"])) .tech-name {
     display: block;
   }

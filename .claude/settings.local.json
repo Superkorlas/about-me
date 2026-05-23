@@ -16,7 +16,8 @@
       "Bash(mkdir -p /tmp/si_test)",
       "Read(//tmp/**)",
       "WebFetch(domain:icon.horse)",
-      "WebFetch(domain:api.iconify.design)"
+      "WebFetch(domain:api.iconify.design)",
+      "Bash(Select-Object FullName)"
     ]
   }
 }

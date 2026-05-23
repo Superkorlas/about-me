@@ -1,20 +1,20 @@
-// Fichero único de URLs de iconos.
-// Cambiar una URL aquí la actualiza en toda la app.
-// Usa '' para forzar el fallback de texto (icono no disponible).
-// Formatos soportados:
-//   - URL externa:  'https://cdn.simpleicons.org/python'
-//   - Local:        '/icons/mi-icono.svg'  (colocar en public/icons/)
+// Single source of truth for all icon URLs.
+// Changing a URL here updates it across the entire app.
+// Use '' to force text fallback (icon not available).
+// Supported formats:
+//   - External URL:  'https://cdn.simpleicons.org/python'
+//   - Local:         '/icons/my-icon.svg'  (place file in public/icons/)
 
 export const ICONS = {
 
-    // --- Navegación (color muted sobre fondo oscuro) ---
+    // --- Navigation (muted color on dark background) ---
     nav: {
         itchio: 'https://cdn.simpleicons.org/itchdotio/94a3b8',
         github: 'https://cdn.simpleicons.org/github/94a3b8',
         linkedin: '',
     },
 
-    // --- Botones en tarjetas de proyecto ---
+    // --- Buttons on project cards ---
     btn: {
         itchio: 'https://cdn.simpleicons.org/itchdotio/ffffff',
         github: 'https://cdn.simpleicons.org/github/c7d2fe',

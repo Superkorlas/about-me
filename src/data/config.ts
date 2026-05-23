@@ -6,8 +6,8 @@ export const SITE_CONFIG = {
     photoUrl: "/profile.jpg",
 };
 
-// Las URLs de los iconos se gestionan en src/data/icons.ts
-// 'icon' debe ser una clave de ICONS.tech
+// Icon URLs are managed in src/data/icons.ts
+// 'icon' must be a key of ICONS.tech
 export const TECH_STACK = [
     { name: 'Python', icon: 'python' },
     { name: 'C#', icon: 'csharp' },
