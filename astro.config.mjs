@@ -6,6 +6,6 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://Superkorlas.github.io',
-  base: '/about-me',
+  base: '/about-me/',
   integrations: [react()],
 });
