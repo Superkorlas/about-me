@@ -12,12 +12,32 @@ const en = {
     'hero.description': 'I craft robust enterprise systems, complex integrations, and interactive experiences.',
 
 
+    'tech.title': 'Tech Stack',
+
     'projects.title': 'Featured Projects',
     'projects.docs': 'Documentation',
     'projects.source': 'Source Code',
     'projects.itch': 'View on Itch.io',
 
     'footer.made': 'Made with Astro by',
+
+    // Contact form
+    'contact.aria': 'Contact',
+    'contact.title': 'Contact me',
+    'contact.name.label': 'Name',
+    'contact.name.placeholder': 'Your name',
+    'contact.email.label': 'Email',
+    'contact.email.placeholder': 'your@email.com',
+    'contact.message.label': 'Message',
+    'contact.message.placeholder': "What's on your mind?",
+    'contact.submit': 'Send message',
+    'contact.sending': 'Sending…',
+
+    // Toast notifications
+    'toast.success': "Message sent! I'll get back to you soon.",
+    'toast.error.prefix': 'Something went wrong. You can also reach me on',
+    'toast.error.linkedin': 'LinkedIn',
+    'toast.dismiss': 'Dismiss',
 
     // Octorabbit
     'project.octorabbit.name': 'Octorabbit',
@@ -66,12 +86,31 @@ const es: Partial<typeof en> = {
     'hero.description': 'Creo sistemas empresariales robustos, integraciones complejas y experiencias interactivas.',
 
 
+    'tech.title': 'Tecnologías',
+
     'projects.title': 'Proyectos Destacados',
     'projects.docs': 'Documentación',
     'projects.source': 'Código Fuente',
     'projects.itch': 'Ver en Itch.io',
 
     'footer.made': 'Hecho con Astro por',
+
+    // Contact form
+    'contact.aria': 'Contactar',
+    'contact.title': 'Contáctame',
+    'contact.name.label': 'Nombre',
+    'contact.name.placeholder': 'Tu nombre',
+    'contact.email.label': 'Email',
+    'contact.message.label': 'Mensaje',
+    'contact.message.placeholder': '¿En qué puedo ayudarte?',
+    'contact.submit': 'Enviar mensaje',
+    'contact.sending': 'Enviando…',
+
+    // Toast notifications
+    'toast.success': '¡Mensaje enviado! Me pondré en contacto contigo pronto.',
+    'toast.error.prefix': 'Algo salió mal. También puedes contactarme en',
+    'toast.error.linkedin': 'LinkedIn',
+    'toast.dismiss': 'Cerrar',
 
     // Octorabbit
     'project.octorabbit.description': '¡Repara la nave y ayuda a salvar el universo! Controla sus tentáculos para arreglar la nave evitando la basura espacial. Desarrollado durante la Global Game Jam 2020.',
