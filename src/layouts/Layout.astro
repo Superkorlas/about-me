@@ -17,10 +17,10 @@ interface Props {
 const { title = t("site.title"), description = t("site.description") } =
     Astro.props;
 
-const themeUrl = resolvePublicAsset('/theme.css');
+const themeUrl = resolvePublicAsset("/theme.css");
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang={defaultLang}>
     <head>
         <meta charset="UTF-8" />
@@ -28,7 +28,7 @@ const themeUrl = resolvePublicAsset('/theme.css');
         <link
             rel="icon"
             type="image/png"
-            href={`${import.meta.env.BASE_URL}fire-softworks.PNG`}
+            href={`${import.meta.env.BASE_URL}fire-softworks-mini.jpg`}
         />
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
@@ -54,14 +54,47 @@ const themeUrl = resolvePublicAsset('/theme.css');
                     {t("site.author")}
                 </div>
                 <div class="nav-links">
-                    <a href={SITE_CONFIG.itchio} target="_blank" rel="noopener noreferrer" aria-label="Itch.io" title="Itch.io">
-                        <IconImg src={ICONS.nav.itchio} alt="Itch.io" width={20} height={20} />
+                    <a
+                        href={SITE_CONFIG.itchio}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Itch.io"
+                        title="Itch.io"
+                    >
+                        <IconImg
+                            src={ICONS.nav.itchio}
+                            alt="Itch.io"
+                            width={20}
+                            height={20}
+                        />
                     </a>
-                    <a href={SITE_CONFIG.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
-                        <IconImg src={ICONS.nav.github} alt="GitHub" width={20} height={20} />
+                    <a
+                        href={SITE_CONFIG.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub"
+                        title="GitHub"
+                    >
+                        <IconImg
+                            src={ICONS.nav.github}
+                            alt="GitHub"
+                            width={20}
+                            height={20}
+                        />
                     </a>
-                    <a href={SITE_CONFIG.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
-                        <IconImg src={ICONS.nav.linkedin} alt="LinkedIn" width={20} height={20} />
+                    <a
+                        href={SITE_CONFIG.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                        title="LinkedIn"
+                    >
+                        <IconImg
+                            src={ICONS.nav.linkedin}
+                            alt="LinkedIn"
+                            width={20}
+                            height={20}
+                        />
                     </a>
                 </div>
             </nav>
