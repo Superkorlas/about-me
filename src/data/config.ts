@@ -30,6 +30,17 @@ export const TECH_STACK = [
 
 export const PROJECTS = [
     {
+        id: "upm-interaction-system",
+        nameKey: "project.upm-interaction-system.name",
+        descriptionKey: "project.upm-interaction-system.description",
+        tagsKeys: ["project.upm-interaction-system.tag.1", "project.upm-interaction-system.tag.2", "project.upm-interaction-system.tag.3"],
+        githubUrl: "",
+        demoUrl: "",
+        docsUrl: "https://superkorlas.github.io/DOC-Unity-InteractionSystem/",
+        itchUrl: "https://superkorlas.itch.io/unity-interaction-system",
+        imageUrl: "/projects/upm-interaction-system-portrait.png",
+    },
+    {
         id: "octorabbit",
         nameKey: "project.octorabbit.name",
         descriptionKey: "project.octorabbit.description",

@@ -39,6 +39,13 @@ const en = {
     'toast.error.linkedin': 'LinkedIn',
     'toast.dismiss': 'Dismiss',
 
+    // Unity Interaction System
+    'project.upm-interaction-system.name': 'Unity Interaction System',
+    'project.upm-interaction-system.description': 'A flexible and reusable interaction system for Unity, allowing you to create interactive objects with custom interactions.',
+    'project.upm-interaction-system.tag.1': 'Unity',
+    'project.upm-interaction-system.tag.2': 'C#',
+    'project.upm-interaction-system.tag.3': 'Game Development',
+
     // Octorabbit
     'project.octorabbit.name': 'Octorabbit',
     'project.octorabbit.description': 'Repair the ship and help save the universe! Control its tentacles to repair the ship, but be careful with the space garbage. Developed during Global Game Jam 2020.',
@@ -111,6 +118,11 @@ const es: Partial<typeof en> = {
     'toast.error.prefix': 'Algo salió mal. También puedes contactarme en',
     'toast.error.linkedin': 'LinkedIn',
     'toast.dismiss': 'Cerrar',
+
+    // Unity Interaction System
+    'project.upm-interaction-system.name': 'Sistema de intracción Unity',
+    'project.upm-interaction-system.description': 'Un sistema de interacción flexible y reutilizable para Unity, que permite crear objetos interactivos con interacciones personalizadas.',
+    'project.upm-interaction-system.tag.3': 'Desarrollo de videojuegos',
 
     // Octorabbit
     'project.octorabbit.description': '¡Repara la nave y ayuda a salvar el universo! Controla sus tentáculos para arreglar la nave evitando la basura espacial. Desarrollado durante la Global Game Jam 2020.',
